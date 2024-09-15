@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.FinishFragment">
+
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+       <com.google.android.material.appbar.CollapsingToolbarLayout
+           android:id="@+id/collapse_ll"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:fitsSystemWindows="true"
+           app:contentScrim="@color/white"
+           app:collapsedTitleTextAppearance="@style/TextAppearance.Finish.Title.Collapsed"
+           app:expandedTitleTextAppearance="@style/TextAppearance.Finish.Title.Expanded"
+           app:statusBarScrim="?attr/colorPrimaryVariant"
+           app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+
+           <nl.dionsegijn.konfetti.KonfettiView
+               android:id="@+id/konfetti_view"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
+
+           <FrameLayout
+               android:id="@+id/fi_finish"
+               android:layout_width="match_parent"
+               android:layout_height="330dp">
+
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/dumbs"
+                   android:contentDescription="@string/image"
+                   android:scaleType="centerCrop"/>
+
+               <TextView
+                   android:id="@+id/tv_finish"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Nice! You have finished the exercise"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginBottom="60dp"
+                   android:textColor="@color/white"
+                   android:textSize="24sp"
+                   android:textStyle="italic"
+                   android:layout_gravity="bottom"/>
+
+               <TextView
+                   android:id="@+id/tv_finish_exercise"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="exercise"
+                   android:textStyle="italic"
+                   android:textColor="@color/white"
+                   android:textSize="24sp"
+                   android:layout_gravity="bottom"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginBottom="25dp"/>
+
+
+
+           </FrameLayout>
+
+           <androidx.appcompat.widget.Toolbar
+               android:id="@+id/toolbar_finish"
+               android:layout_width="match_parent"
+               android:layout_height="?attr/actionBarSize"
+               android:theme="@style/ToolbarTheme"
+               app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+               app:layout_collapseMode="pin"
+               android:background="@android:color/transparent"
+               />
+
+
+
+
+       </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_view_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="22dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/background_round_finish"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/exercise_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/exercise"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/calories_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/calories"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias=".6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/time_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/time"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/exercise_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintHorizontal_bias=".2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exercise_count_label"/>
+
+
+            <TextView
+                android:id="@+id/calorie_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="76"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".6"
+                app:layout_constraintTop_toBottomOf="@id/calories_count_label"/>
+
+
+            <TextView
+                android:id="@+id/time_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="00.90"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".98"
+                app:layout_constraintTop_toBottomOf="@id/time_count_label"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_view_one"
+            tools:context=".BMIActivity">
+
+            <TextView
+                android:id="@+id/tv_bmi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/bmi"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/tv_bmi_title"
+                android:background="@drawable/radio_group_tab_background"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMetricUnits"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.50"
+                    android:background="@drawable/unit_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="METRIC UNITS"
+                    android:textColor="@drawable/unit_tab_color_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/rbUSUnits"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.50"
+                    android:background="@drawable/unit_tab_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="US UNITS"
+                    android:textColor="@drawable/unit_tab_color_selector"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/til_metric_unit_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:boxStrokeColor="#0000FF"
+                app:hintTextColor="#0000FF"
+                android:layout_below="@id/rgUnits"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/et_metric_unit_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="WEIGHT (in kg)"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/til_metric_unit_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:boxStrokeColor="#0000FF"
+                app:hintTextColor="#0000FF"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_below="@id/til_metric_unit_weight">
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/et_metric_unit_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="HEIGHT (in cm)"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:backgroundTint="#ff781f"
+                android:layout_below="@id/til_metric_unit_height"
+                android:text="CALCULATE"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/til_metric_unit_weight_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                app:boxStrokeColor="#0000FF"
+                app:hintTextColor="#0000FF"
+                android:layout_below="@id/rgUnits"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/et_metric_unit_weight_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="WEIGHT (in pounds)"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/til_metric_unit_weight"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/til_metric_unit_height_us_feet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                app:boxStrokeColor="#0000FF"
+                app:hintTextColor="#0000FF"
+                android:layout_below="@id/til_metric_unit_weight"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/view"
+                android:visibility="gone"
+                tools:visibility = "visible">
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/et_metric_unit_height_us_feet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="FEET"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/til_metric_unit_height_us_inch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                app:boxStrokeColor="#0000FF"
+                app:hintTextColor="#0000FF"
+                android:layout_below="@id/til_metric_unit_weight"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/view"
+                android:visibility="gone"
+                tools:visibility = "visible">
+
+                <androidx.appcompat.widget.AppCompatEditText
+
+                    android:id="@+id/et_metric_unit_height_us_inch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="INCH"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+
+                android:id="@+id/ll_display_bmi_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_below="@id/btn_calculate"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_your_bmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="YOUR BMI"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_bmi_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    tools:text = "15.00"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tv_bmi_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    tools:text = "Normal"/>
+
+                <TextView
+                    android:id="@+id/tv_bmi_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    tools:text = "Normal"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/finish_next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/teal_200"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_round"
+                android:layout_below="@id/ll_display_bmi_result"/>
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

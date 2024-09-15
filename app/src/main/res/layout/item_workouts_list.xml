@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/cll"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="15dp"
+     android:layout_marginEnd="15dp"
+     android:layout_marginTop="10dp"
+     android:layout_marginBottom="10dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+  <TextView
+      android:id="@+id/current_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="16sp"
+      android:text="@string/_23_apr"
+      android:textStyle="normal"
+      android:padding="5dp"
+      android:textColor="@color/black"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+      android:id="@+id/seventh_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="16sp"
+      android:text="01/May"
+      android:textStyle="bold"
+      android:padding="5dp"
+      android:textColor="@color/black"
+      app:layout_constraintStart_toEndOf="@id/current_date"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  <ImageView
+      android:id="@+id/iv_time"
+      android:layout_width="31dp"
+      android:layout_height="31dp"
+      android:src="@drawable/ic_baseline_access_time_24"
+      android:contentDescription="@string/image"
+      android:layout_marginTop="4dp"
+      android:padding="5dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias=".85"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+      android:id="@+id/tv_time_secs"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="20s"
+      android:textStyle="normal"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:padding="5dp"
+      android:layout_marginStart="1dp"
+      android:layout_marginEnd="6dp"
+      app:layout_constraintStart_toEndOf="@id/iv_time"
+      app:layout_constraintTop_toTopOf="@id/iv_time"/>
+
+  <TextView
+      android:id="@+id/num_workouts"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="5"
+      android:textStyle="normal"
+      android:textColor="@color/black"
+      android:textSize="18sp"
+      android:layout_marginTop="10dp"
+      android:padding="5dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/current_date"/>
+
+  <TextView
+      android:id="@+id/num_workouts_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="workouts"
+      android:textStyle="normal"
+      android:textColor="@color/black"
+      android:textSize="18sp"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="5dp"
+      android:padding="5dp"
+      app:layout_constraintStart_toEndOf="@id/num_workouts"
+      app:layout_constraintTop_toBottomOf="@id/current_date"/>
+
+  <ImageView
+      android:id="@+id/iv_calorie"
+      android:layout_width="33dp"
+      android:layout_height="33dp"
+      android:src="@drawable/calorie"
+      android:contentDescription="@string/image"
+      android:layout_marginTop="6dp"
+      android:layout_marginStart="15dp"
+      android:padding="5dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias=".85"
+      app:layout_constraintTop_toBottomOf="@id/iv_time"/>
+
+  <TextView
+      android:id="@+id/calorie_counts"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="80"
+      android:textStyle="normal"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:layout_marginStart="1dp"
+      android:layout_marginEnd="6dp"
+      android:padding="5dp"
+      app:layout_constraintStart_toEndOf="@id/iv_calorie"
+      app:layout_constraintTop_toTopOf="@id/iv_calorie"/>
+
+
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#808080"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cll"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_workouts_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

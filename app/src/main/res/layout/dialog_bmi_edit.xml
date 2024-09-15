@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tv_dialog_weight_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/dialog_metric_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".6"
+        android:hint="@string/_55kg"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_weight_title"/>
+
+
+
+
+    <TextView
+        android:id="@+id/tv_dialog_height_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_metric_weight"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/dialog_metric_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".6"
+        android:hint="155cm"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_height_title"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_dialog_weight_title_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        android:textColor="@color/black"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/dialog_metric_weight_us"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".5"
+        android:hint=""
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_weight_title_us"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_height_title_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_metric_weight_us"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/dialog_metric_height_feet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".25"
+        android:hint=""
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:inputType="number"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_height_title_us"/>
+
+
+    <EditText
+        android:id="@+id/dialog_metric_height_inch_us"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".3"
+        android:hint=""
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:inputType="number"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toEndOf="@id/dialog_metric_height_feet"
+        app:layout_constraintTop_toTopOf="@id/dialog_metric_height_feet"/>
+
+    <Button
+        android:id="@+id/btn_kg"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/kg"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintVertical_bias=".18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_lb"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/lbs"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintStart_toEndOf="@id/btn_kg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_kg"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/btn_cm"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/cm"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias=".75"
+        app:layout_constraintVertical_bias=".4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_kg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_in"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="@string/in"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintStart_toEndOf="@id/btn_cm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_cm"
+        />
+
+    <Button
+        android:id="@+id/btn_cancel_metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_cm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias=".65"
+        app:layout_constraintVertical_bias=".95"/>
+
+    <Button
+        android:id="@+id/btn_save_metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel_metric"
+        app:layout_constraintTop_toTopOf="@id/btn_cancel_metric"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

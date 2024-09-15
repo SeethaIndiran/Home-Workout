@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/item_iv_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:layout_marginStart="10dp"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/item_iv_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/tv_date"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_exercise_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/item_iv_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_date"/>
+
+    <ImageView
+        android:id="@+id/iv_time"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_baseline_access_time_24"
+        android:contentDescription="@string/image"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/tv_exercise_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name"/>
+
+    <TextView
+        android:id="@+id/tv_time_secs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20s"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@id/iv_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name"/>
+
+    <ImageView
+        android:id="@+id/iv_calorie"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/calorie"
+        android:contentDescription="@string/image"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@id/tv_time_secs"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name"/>
+
+    <TextView
+        android:id="@+id/calorie_counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="80"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@id/iv_calorie"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_name"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#808080"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_calorie"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

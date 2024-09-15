@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/trainingFragment"
+        android:title="@string/training"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_access_time_24"/>
+
+
+    <item
+        android:id="@+id/discoverFragment"
+        android:title="@string/discover"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_saved_search_24"/>
+
+
+    <item
+        android:id="@+id/reportFragment"
+        android:title="@string/report"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_equalizer_24"/>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_person_24"/>
+
+</menu>
