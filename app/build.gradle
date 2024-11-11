@@ -58,6 +58,7 @@ dependencies {
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.google.android.gms:play-services-tasks:17.0.0'
 
+    testImplementation 'org.mockito:mockito-inline:4.8.0' // Ensure this version matches the latest available
 
 
     // Material Design
