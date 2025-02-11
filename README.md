@@ -1,75 +1,102 @@
-# 🏋️‍♂️Home Workout App
+# Home Workout App
 
-## 📌Overview
-     The Workout Tracker App is a native Android application built using Kotlin that helps users log their workouts, track progress over time, 
-     and visualize fitness data using interactive charts. It includes 
-     features like a workout history, calendar tracking, exercise timer, 
-     BMI and weight monitoring, and smooth animations for an engaging user experience.
+## Overview
+   The Home Workout App is designed to to help users track their workouts, monitor progress, and stay motivated. The app provides a calendar-based workout tracker, exercise timer, and BMI/weight tracking charts, making it an all-in-one solution for fitness enthusiasts. It follows MVVM architecture and integrates Dagger Hilt, Coroutines, and ViewModel to ensure a robust and scalable codebase.
 
-## 🎯 Features
-     ✅ Track Workouts: Log exercises, repetitions, and duration for each session.
-     ✅ Calendar View: View and manage daily workout progress.
-     ✅ Exercise Timer: Built-in timer to track workout duration.
-     ✅ Workout History: Review past workouts in a RecyclerView.
-     ✅ BMI & Weight Tracking: Monitor fitness progress with interactive MPAndroid Charts.
-     ✅ Data Persistence: Store workout logs using Room Database for offline access.
-     ✅ User Preferences: Save settings such as unit preferences with SharedPreferences.
-     ✅ Modern UI: Uses Material Design, ConstraintLayout, and animations for a smooth experience.
-     ✅ Lottie Animations: Engaging UI animations to enhance user interaction.
+## Features
+### 📅 Workout Tracking with Calendar View
 
-## 🛠 Tech Stack
-     * Language: Kotlin
-     * Architecture: MVVM (Model-View-ViewModel)
-     * Dependency Injection: Dagger Hilt
-     * Networking: Retrofit with Coroutines
-     * Data Storage: Room Database, SharedPreferences
-     * UI Components: Jetpack Compose, ConstraintLayout, Material Design
-     * Asynchronous Handling: Kotlin Coroutines and Flow
-     * Charts & Visualization: MPAndroid Charts
-     * Testing: JUnit, Mockito, Espresso
+   * Users can log daily and weekly workout sessions.
+   * Workouts are displayed on a CalendarView, visually representing the user's workout history.
+   * Users can view past workout sessions and stay consistent with their fitness goals.
 
-## 📂 Project Structure
-      ├── data
-      │   ├── local (Room Database for offline storage)
-      │   ├── repository (Handles data operations)
-      ├── di (Dagger Hilt modules for dependency injection)
-      ├── ui
-      │   ├── home (Main workout dashboard)
-      │   ├── calendar (Workout tracking calendar)
-      │   ├── history (Workout history display)
-      │   ├── bmi (BMI and weight tracking with charts)
-      ├── utils (Helper functions, extensions, and constants)
-      └── viewmodel (ViewModels for UI logic)
+### ⏳ Exercise Timer & Workout Routine
+   * A built-in exercise timer helps users track workout durations.
+   * The app provides guided exercises with animations to assist users in maintaining proper form.
+   * Workouts can be categorized based on types like cardio, strength training, or yoga.
 
-## 🚀 Installation and Setup
-       1️⃣ Clone the repository
-       2️⃣ Open the project in Android Studio
-       3️⃣ Sync Gradle and build the project
-       4️⃣ Run the app on an emulator or physical device
+### 📊 Progress Tracking with MPAndroid Charts
+   * The app uses MPAndroidChart to display BMI and weight trends over time.
+   * Users can analyze their fitness journey using line charts and pie charts for detailed insights.
+   * Charts update dynamically as users log their progress.
 
-## 🧪 Testing
-       * The app includes unit tests and UI tests.
-       * Unit Testing: ViewModel, Repository, and Database tested with JUnit and Mockito.
-       *  UI Testing: Fragment navigation and user interactions tested using Espresso.
-       Run tests using:
-       ./gradlew testDebugUnitTest
-       ./gradlew connectedAndroidTest
+### 🏋️ Exercise Animations using Lottie
+   * Lottie animations provide visual guidance for workouts.
+   * Engaging and interactive animations improve user experience and encourage consistency.
 
-## 🤝 Contributing
-      Contributions are welcome! Follow these steps to contribute:
+### 📖 Workout History in RecyclerView
+   * A RecyclerView displays the history of completed workouts.
+   * Users can scroll through their past sessions and analyze trends.
 
-     1️⃣ Fork the repository
-     2️⃣ Create a feature branch
-     3️⃣ Commit your changes
-     4️⃣ Push to the branch
-     5️⃣ Open a Pull Request
+### ⚙️ MVVM Architecture for Clean Code
+   * Uses MVVM (Model-View-ViewModel) to ensure a clean and maintainable architecture.
+   * Separates concerns between UI, business logic, and data handling.
 
-## 📧 Contact
-     For questions or feedback, contact:
-    📩 Email: seethaindhiran@gmail.com
-    👨‍💻 GitHub: yourusername
+### 🚀 Dagger Hilt for Dependency Injection
+   * Dagger Hilt is used for dependency injection, making the app modular and scalable.
 
-## Screenshots
+### 🔄 Coroutines for Efficient Background Processing
+   * Uses Kotlin Coroutines to handle background tasks like saving workouts, fetching data, and updating UI smoothly.
+
+### 🏆 User-Friendly UI with ConstraintLayout
+   * A well-designed UI using ConstraintLayout for seamless adaptability across different screen sizes.
+   * A CollapsingToolbarLayout enhances the aesthetic appeal.
+
+## Tech Stack
+  * Language: Kotlin
+  * Architecture: MVVM (Model-View-ViewModel)
+  * Dependency Injection: Dagger Hilt
+  * Networking: Retrofit with Coroutines
+  * Data Storage: Room Database, SharedPreferences
+  * Charts and Graphs: MP Android Charts
+  * UI Components: Jetpack Compose, ConstraintLayout, Material Design
+  * Asynchronous Handling: Kotlin Coroutines and Flow
+  * Testing: JUnit, Mockito, Espresso
+
+## Installation
+Clone the repository:
+
+1. git clone https://github.com/yourusername/home-workout-app.git
+2. Open the project in Android Studio
+3. Sync Gradle and build the project
+4. Run the app on an emulator or a physical device
+
+## Running Tests
+###  Unit Tests (JUnit, Mockito)
+   Unit Tests verify the functionalities of Viewmoels, Repositiories and other componenets.
+   
+   To run Unit Tests:
+  
+   1. Open Terminal in Android Studio
+   
+   2. Execute ./gradlew test
+       
+###  Instrumented UI Tests (Espresso, Hilt Testing)
+    
+   
+   To run Instrumented Tests:
+  
+   1. Connect  an Android Emulator or physical device
+   
+   2. Execute ./gradlew connectedAndroidTest
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## Contact
+
+For questions or feedback, contact:
+Email: seethaindhiran@gmail.com
+GitHub: SeethaIndiran
+
+## Screen shots
 
 ![image alt](https://github.com/SeethaIndiran/Home-Workout/blob/050d0bb587c8149b525f948534d6a7e7a882f23d/1%5B2%5D.png)
 ![image alt](https://github.com/SeethaIndiran/Home-Workout/blob/39c7ec4eb2f3677881b97292ab3ca2480dcd5dcf/2%5B1%5D.png)
