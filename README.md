@@ -49,7 +49,7 @@
   * Networking: Retrofit with Coroutines
   * Data Storage: Room Database, SharedPreferences
   * Charts and Graphs: MP Android Charts
-  * UI Components: Jetpack Compose, ConstraintLayout, Material Design
+  * UI Components: XML Layouts, ConstraintLayout, Material Design
   * Asynchronous Handling: Kotlin Coroutines and Flow
   * Testing: JUnit, Mockito, Espresso
 
